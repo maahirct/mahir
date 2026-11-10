@@ -4,11 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ESSENCE | Luxury Perfumes</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -16,142 +19,191 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --pink: #e8a5b5;
+    --dark-pink: #b76e83;
+    --light-pink: #fff0f3;
+    --soft-pink: #f9dfe6;
+    --rose-gold: #b88a78;
+    --dark: #39252c;
+    --white: #ffffff;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafbf8;
-    color: #303c32;
+    background: #fffafb;
+    color: var(--dark);
 }
 
 /* NAVBAR */
 header {
-    background: white;
+    background: rgba(255,255,255,0.97);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 15px rgba(100,40,60,0.04);
 }
 
 .navbar {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: auto;
-    padding: 20px 30px;
+    padding: 20px 35px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    letter-spacing: 3px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: var(--dark);
 }
 
 .logo span {
-    color: #91a58d;
+    color: var(--dark-pink);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 35px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #4b574c;
-    font-size: 13px;
+    color: #634d54;
+    font-size: 12px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #91a58d;
+    color: var(--dark-pink);
 }
 
 .cart-btn {
-    background: #657c68;
+    padding: 12px 23px;
+    background: var(--dark);
     color: white;
     border: none;
-    padding: 12px 22px;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.cart-btn:hover {
+    background: var(--dark-pink);
 }
 
 /* HERO */
 .hero {
-    min-height: 570px;
+    min-height: 620px;
+    background: linear-gradient(120deg, #fff0f3, #f9dfe6);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 60px 8%;
-    background: #e9eee6;
-    gap: 40px;
+    padding: 70px 9%;
+    gap: 45px;
 }
 
 .hero-content {
-    max-width: 480px;
+    max-width: 500px;
 }
 
 .tagline {
-    letter-spacing: 4px;
+    color: var(--dark-pink);
     font-size: 11px;
-    color: #718675;
+    letter-spacing: 5px;
     margin-bottom: 25px;
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(45px, 6vw, 75px);
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 14px;
-    line-height: 2;
-    color: #687469;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.12;
+    font-weight: 500;
     margin-bottom: 25px;
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 450px;
-    height: 430px;
-    object-fit: cover;
+.hero h1 span {
+    color: var(--dark-pink);
+    font-style: italic;
+}
+
+.hero-content > p:not(.tagline) {
+    color: #826b73;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 32px;
 }
 
 .main-btn {
     display: inline-block;
-    background: #657c68;
+    padding: 15px 32px;
+    background: var(--dark);
     color: white;
     text-decoration: none;
-    padding: 15px 30px;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
     border: none;
     cursor: pointer;
 }
 
 .main-btn:hover {
-    background: #344a38;
+    background: var(--dark-pink);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 440px;
+    height: 490px;
+    object-fit: cover;
+    border: 10px solid white;
+    box-shadow: 0 20px 50px rgba(120,50,70,0.12);
+}
+
+/* FEATURE STRIP */
+.features {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
+    background: white;
+    border-bottom: 1px solid #f5e6ea;
+}
+
+.feature {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #785d66;
 }
 
 /* PRODUCTS */
 .products {
-    padding: 90px 8%;
+    padding: 100px 8%;
 }
 
 .section-heading {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 .section-heading p {
-    color: #819583;
-    font-size: 11px;
-    letter-spacing: 4px;
+    color: var(--dark-pink);
+    letter-spacing: 5px;
+    font-size: 10px;
     margin-bottom: 15px;
 }
 
 .section-heading h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 500;
 }
 
@@ -163,109 +215,149 @@ header {
 
 .product-card {
     background: white;
-    padding-bottom: 25px;
     text-align: center;
-    transition: 0.3s;
+    padding-bottom: 28px;
+    transition: 0.4s;
+    border: 1px solid #f5e9ec;
 }
 
 .product-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(130,70,85,0.12);
 }
 
 .product-card img {
     width: 100%;
-    height: 260px;
+    height: 280px;
     object-fit: cover;
+    background: var(--light-pink);
 }
 
 .product-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 500;
     margin-top: 20px;
 }
 
 .product-card p {
-    font-size: 11px;
-    color: #899189;
+    color: #a08a91;
+    font-size: 10px;
     margin: 10px 0;
+    letter-spacing: 1px;
 }
 
 .product-card h4 {
-    margin: 12px 0;
-    color: #657c68;
+    color: var(--dark-pink);
+    font-size: 16px;
+    margin: 15px 0;
 }
 
 .product-card button {
-    padding: 11px 25px;
+    padding: 11px 27px;
+    border: 1px solid var(--dark-pink);
+    color: var(--dark-pink);
     background: transparent;
-    border: 1px solid #657c68;
-    color: #657c68;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .product-card button:hover {
-    background: #657c68;
+    background: var(--dark-pink);
     color: white;
+}
+
+/* COLLECTION BANNER */
+.banner {
+    margin: 10px 8% 80px;
+    background: #f8dce4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 65px 40px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.banner p {
+    font-size: 12px;
+    color: #846b74;
+    margin: 15px 0 25px;
 }
 
 /* ABOUT */
 .about {
     display: flex;
     align-items: center;
-    gap: 70px;
-    padding: 80px 10%;
-    background: #edf0e9;
+    gap: 75px;
+    padding: 90px 10%;
+    background: #fff0f3;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 450px;
-    height: 400px;
+    max-width: 460px;
+    height: 420px;
     object-fit: cover;
 }
 
 .about-content {
-    max-width: 450px;
+    max-width: 460px;
 }
 
-.about-content > p:first-child {
-    color: #819583;
-    font-size: 11px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+.about-content .label {
+    color: var(--dark-pink);
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
 }
 
 .about-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    line-height: 1.4;
-    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 25px;
 }
 
-.about-content > p:not(:first-child) {
-    font-size: 13px;
-    line-height: 2;
-    color: #737e73;
-    margin-bottom: 25px;
+.about-content .description {
+    color: #856e76;
+    font-size: 12px;
+    line-height: 2.2;
+    margin-bottom: 30px;
 }
 
 /* CONTACT */
 .contact {
     text-align: center;
-    padding: 90px 20px;
+    padding: 100px 20px;
 }
 
-.contact p {
-    color: #819583;
-    font-size: 12px;
-    margin: 15px 0 25px;
-    letter-spacing: 2px;
+.contact .label {
+    color: var(--dark-pink);
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
 }
 
 .contact h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.contact p {
+    color: #907b82;
+    font-size: 12px;
+    margin: 20px 0 30px;
 }
 
 /* CART */
@@ -273,8 +365,8 @@ header {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 200;
+    background: rgba(30,15,20,0.55);
+    z-index: 300;
     justify-content: center;
     align-items: center;
     padding: 15px;
@@ -282,82 +374,86 @@ header {
 
 .cart-box {
     background: white;
-    width: 420px;
+    width: 440px;
     max-width: 100%;
-    padding: 35px;
-    position: relative;
-    border-radius: 5px;
     max-height: 85vh;
     overflow-y: auto;
+    padding: 35px;
+    position: relative;
 }
 
 .cart-box h2 {
     font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 28px;
     margin-bottom: 25px;
 }
 
 .close-btn {
     position: absolute;
     top: 15px;
-    right: 15px;
-    border: none;
+    right: 18px;
+    font-size: 22px;
     background: none;
+    border: none;
     cursor: pointer;
-    font-size: 20px;
 }
 
 #cart-items p {
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f3e5e9;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+    font-size: 12px;
 }
 
 .remove-btn {
-    color: #b14d4d;
-    border: none;
     background: none;
+    color: #bd667d;
+    border: none;
     cursor: pointer;
 }
 
 .cart-box h3 {
     margin: 25px 0;
+    font-size: 17px;
 }
 
 .checkout-btn {
     width: 100%;
-    padding: 14px;
-    background: #657c68;
+    padding: 15px;
+    background: var(--dark);
     color: white;
     border: none;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 /* FOOTER */
 footer {
-    background: #344a38;
+    background: #39252c;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 footer h2 {
     font-family: 'Playfair Display', serif;
-    letter-spacing: 4px;
-    margin-bottom: 12px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
 }
 
 footer p {
+    color: #d8bbc3;
     font-size: 11px;
-    margin: 8px;
-    color: #d5ded4;
+    margin: 10px;
 }
 
 /* RESPONSIVE */
-@media(max-width: 850px) {
+@media(max-width: 900px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -365,6 +461,10 @@ footer p {
     .hero, .about {
         flex-direction: column;
         text-align: center;
+    }
+
+    .features {
+        gap: 25px;
     }
 }
 
@@ -375,143 +475,252 @@ footer p {
         gap: 15px;
     }
 
+    .logo {
+        font-size: 23px;
+    }
+
     .nav-links {
         order: 3;
         width: 100%;
         justify-content: center;
-        gap: 15px;
+        gap: 17px;
     }
 
     .nav-links a {
-        font-size: 11px;
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero-image img {
+        height: 320px;
     }
 
     .product-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero-image img {
-        height: 300px;
+    .products {
+        padding: 70px 8%;
     }
 
     .section-heading h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .about-content h2 {
+        font-size: 32px;
+    }
+
+    .banner {
+        margin: 10px 5% 60px;
+        padding: 45px 15px;
+    }
+
+    .banner h2 {
         font-size: 30px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
 <header>
 <nav class="navbar">
+
     <h2 class="logo">ESSENCE<span>.</span></h2>
 
     <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Collection</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#products">COLLECTION</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
     </ul>
 
     <button class="cart-btn" onclick="showCart()">
-        Bag (<span id="cart-count">0</span>)
+        BAG (<span id="cart-count">0</span>)
     </button>
+
 </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-content">
-        <div class="tagline">THE ART OF FRAGRANCE</div>
 
-        <h1>A scent that<br>defines you.</h1>
+    <div class="hero-content">
+
+        <p class="tagline">THE ART OF FRAGRANCE</p>
+
+        <h1>Elegance in<br>Every <span>Drop.</span></h1>
 
         <p>
-            Discover timeless fragrances crafted
-            to express your unique personality.
+            Discover the beauty of timeless fragrances.
+            A collection created for those who love
+            elegance, confidence and individuality.
         </p>
 
         <a href="#products" class="main-btn">
-            Explore Collection
+            EXPLORE COLLECTION
         </a>
+
     </div>
 
     <div class="hero-image">
+
         <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=900"
-             alt="Luxury perfume">
+        alt="Luxury perfume bottle">
+
     </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature">✧ PREMIUM FRAGRANCES</div>
+    <div class="feature">✧ ELEGANT COLLECTION</div>
+    <div class="feature">✧ BEAUTY IN EVERY DROP</div>
+
 </section>
 
 <!-- PRODUCTS -->
 <section class="products" id="products">
 
     <div class="section-heading">
-        <p>OUR COLLECTION</p>
-        <h2>Find Your Signature Scent</h2>
+
+        <p>DISCOVER OUR WORLD</p>
+
+        <h2>Signature Collection</h2>
+
     </div>
 
     <div class="product-grid">
 
         <div class="product-card">
+
             <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600" alt="Rose Elegance">
+
             <h3>Rose Elegance</h3>
-            <p>Floral · Romantic · Soft</p>
+
+            <p>FLORAL · ROMANTIC · SOFT</p>
+
             <h4>₹1,499</h4>
-            <button onclick="addToCart('Rose Elegance',1499)">Add to Bag</button>
+
+            <button onclick="addToCart('Rose Elegance',1499)">
+                ADD TO BAG
+            </button>
+
         </div>
 
         <div class="product-card">
+
             <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600" alt="Midnight Oud">
+
             <h3>Midnight Oud</h3>
-            <p>Woody · Deep · Bold</p>
+
+            <p>WOODY · DEEP · BOLD</p>
+
             <h4>₹1,899</h4>
-            <button onclick="addToCart('Midnight Oud',1899)">Add to Bag</button>
+
+            <button onclick="addToCart('Midnight Oud',1899)">
+                ADD TO BAG
+            </button>
+
         </div>
 
         <div class="product-card">
+
             <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600" alt="Pure Essence">
+
             <h3>Pure Essence</h3>
-            <p>Fresh · Clean · Elegant</p>
+
+            <p>FRESH · CLEAN · ELEGANT</p>
+
             <h4>₹1,299</h4>
-            <button onclick="addToCart('Pure Essence',1299)">Add to Bag</button>
+
+            <button onclick="addToCart('Pure Essence',1299)">
+                ADD TO BAG
+            </button>
+
         </div>
 
         <div class="product-card">
+
             <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600" alt="Golden Aura">
+
             <h3>Golden Aura</h3>
-            <p>Luxury · Warm · Classic</p>
+
+            <p>LUXURY · WARM · CLASSIC</p>
+
             <h4>₹2,199</h4>
-            <button onclick="addToCart('Golden Aura',2199)">Add to Bag</button>
+
+            <button onclick="addToCart('Golden Aura',2199)">
+                ADD TO BAG
+            </button>
+
         </div>
 
     </div>
+
+</section>
+
+<!-- BANNER -->
+<section class="banner">
+
+    <div>
+
+        <h2>Find Your Signature Scent</h2>
+
+        <p>
+            A beautiful fragrance is the perfect
+            finishing touch to every moment.
+        </p>
+
+        <a href="#products" class="main-btn">
+            SHOP NOW
+        </a>
+
+    </div>
+
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
 
     <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800" alt="Our perfume collection">
+
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800"
+        alt="Luxury beauty collection">
+
     </div>
 
     <div class="about-content">
-        <p>OUR STORY</p>
 
-        <h2>More than a fragrance.<br>A lasting impression.</h2>
+        <p class="label">OUR STORY</p>
 
-        <p>
+        <h2>More Than a Fragrance. A Lasting Impression.</h2>
+
+        <p class="description">
+
             At ESSENCE, we believe every fragrance tells
-            a story. Our collection is inspired by elegance,
-            nature and individuality.
+            a beautiful story. Our collection is inspired
+            by timeless elegance, delicate beauty and
+            individuality.
+
+            Discover a scent that makes every moment
+            unforgettable.
+
         </p>
 
-        <a href="#contact" class="main-btn">Discover More</a>
+        <a href="#contact" class="main-btn">
+            DISCOVER MORE
+        </a>
+
     </div>
 
 </section>
@@ -519,19 +728,22 @@ footer p {
 <!-- CONTACT -->
 <section class="contact" id="contact">
 
-    <p>GET IN TOUCH</p>
+    <p class="label">GET IN TOUCH</p>
 
-    <h2>Let's Connect</h2>
+    <h2>Let's Connect.</h2>
 
-    <p>Have a question? We'd love to hear from you.</p>
+    <p>
+        Have a question about our collection?
+        We'd love to hear from you.
+    </p>
 
     <a href="mailto:hello@essence.com" class="main-btn">
-        Contact Us
+        CONTACT US
     </a>
 
 </section>
 
-<!-- SHOPPING CART -->
+<!-- CART MODAL -->
 <div class="cart-modal" id="cart-modal">
 
     <div class="cart-box">
@@ -545,22 +757,30 @@ footer p {
         <h3>Total: ₹<span id="total">0</span></h3>
 
         <button class="checkout-btn" onclick="checkout()">
-            Checkout
+            CHECKOUT
         </button>
 
     </div>
+
 </div>
 
 <!-- FOOTER -->
 <footer>
+
     <h2>ESSENCE.</h2>
-    <p>Where every scent tells a story.</p>
-    <p>© 2026 ESSENCE. All Rights Reserved.</p>
+
+    <p>WHERE EVERY SCENT TELLS A STORY.</p>
+
+    <p>© 2026 ESSENCE. ALL RIGHTS RESERVED.</p>
+
 </footer>
 
+<!-- JAVASCRIPT -->
 <script>
+
 let cart = [];
 
+// ADD TO CART
 function addToCart(name, price) {
 
     cart.push({
@@ -574,17 +794,21 @@ function addToCart(name, price) {
 
 }
 
+// SHOW CART
 function showCart() {
 
     document.getElementById("cart-modal").style.display = "flex";
 
     let cartItems = document.getElementById("cart-items");
+
     let total = 0;
 
     cartItems.innerHTML = "";
 
     if (cart.length === 0) {
-        cartItems.innerHTML = "<p>Your bag is empty.</p>";
+
+        cartItems.innerHTML = "<p>Your shopping bag is empty.</p>";
+
     }
 
     cart.forEach((item, index) => {
@@ -592,12 +816,20 @@ function showCart() {
         total += item.price;
 
         cartItems.innerHTML += `
+
             <p>
+
                 <span>${item.name} - ₹${item.price}</span>
-                <button class="remove-btn" onclick="removeItem(${index})">
-                    Remove
+
+                <button class="remove-btn"
+                onclick="removeItem(${index})">
+
+                    REMOVE
+
                 </button>
+
             </p>
+
         `;
 
     });
@@ -606,6 +838,7 @@ function showCart() {
 
 }
 
+// REMOVE ITEM
 function removeItem(index) {
 
     cart.splice(index, 1);
@@ -616,17 +849,20 @@ function removeItem(index) {
 
 }
 
+// CLOSE CART
 function closeCart() {
 
     document.getElementById("cart-modal").style.display = "none";
 
 }
 
+// CHECKOUT
 function checkout() {
 
     if (cart.length === 0) {
 
         alert("Your shopping bag is empty!");
+
         return;
 
     }
@@ -641,14 +877,17 @@ function checkout() {
 
 }
 
-// Close cart when clicking outside
+// CLICK OUTSIDE TO CLOSE
 document.getElementById("cart-modal").addEventListener("click", function(e) {
 
     if (e.target === this) {
+
         closeCart();
+
     }
 
 });
+
 </script>
 
 </body>
