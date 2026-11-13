@@ -4,20 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mahir Bin Najim | DevOps Educator</title>
+<title>Mahir Bin Najim | DevOps Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --black: #111126;
-    --dark: #191936;
-    --purple: #8B9CFF;
-    --purple-dark: #6578E8;
-    --white: #F7F7FC;
-    --gray: #B6B5CC;
-    --border: #303052;
+    --black: #111714;
+    --dark: #19221D;
+    --green: #65D6A0;
+    --green-dark: #37AE78;
+    --white: #F4F7F4;
+    --gray: #A9B5AD;
+    --border: #29352E;
 }
 
 * {
@@ -41,8 +40,8 @@ a {
 /* NAVBAR */
 
 header {
-    background: rgba(17,17,38,.96);
-    backdrop-filter: blur(15px);
+    background: rgba(17,23,20,.95);
+    backdrop-filter: blur(12px);
     padding: 20px 8%;
     display: flex;
     align-items: center;
@@ -55,8 +54,8 @@ header {
 }
 
 .logo {
-    color: var(--purple);
-    font-size: 25px;
+    color: var(--green);
+    font-size: 24px;
     font-weight: 800;
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -73,14 +72,14 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--purple);
+    color: var(--green);
 }
 
 .menu {
     display: none;
     background: none;
     border: none;
-    color: var(--purple);
+    color: var(--green);
     font-size: 25px;
     cursor: pointer;
 }
@@ -89,12 +88,12 @@ nav a:hover {
 
 .hero {
     min-height: 100vh;
-    padding: 160px 8% 100px;
+    padding: 170px 8% 110px;
     display: flex;
     align-items: center;
     background:
-      radial-gradient(ellipse at 85% 30%, #30275D 0%, transparent 45%),
-      var(--black);
+        radial-gradient(ellipse at 85% 30%, #1b3c2d 0%, transparent 40%),
+        var(--black);
 }
 
 .hero-content {
@@ -103,10 +102,10 @@ nav a:hover {
 
 .tag {
     display: inline-block;
-    color: var(--purple);
-    background: #8B9CFF15;
-    border: 1px solid #8B9CFF50;
-    padding: 11px 18px;
+    color: var(--green);
+    background: #65D6A014;
+    border: 1px solid #65D6A040;
+    padding: 10px 17px;
     border-radius: 30px;
     font-size: 12px;
     letter-spacing: 1px;
@@ -116,19 +115,19 @@ nav a:hover {
 .hero h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(45px, 7vw, 82px);
-    line-height: 1.15;
-    margin-bottom: 22px;
+    line-height: 1.13;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hero h1 span {
-    color: var(--purple);
+    color: var(--green);
 }
 
 .hero h3 {
     font-size: 19px;
     font-weight: 500;
-    color: #D1D0ED;
+    color: #D3DED6;
     margin-bottom: 20px;
 }
 
@@ -148,9 +147,9 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    padding: 14px 26px;
+    padding: 14px 25px;
     border-radius: 6px;
-    background: var(--purple);
+    background: var(--green);
     color: var(--black);
     font-weight: 700;
     font-size: 13px;
@@ -158,34 +157,28 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #B0BBFF;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px #8B9CFF30;
+    background: #8AE6B8;
+    transform: translateY(-3px);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--purple);
-    border: 1px solid var(--purple);
-}
-
-.btn-outline:hover {
-    background: var(--purple);
-    color: var(--black);
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 
 /* GENERAL */
 
 section {
-    padding: 100px 8%;
+    padding: 95px 8%;
 }
 
 .heading {
-    margin-bottom: 48px;
+    margin-bottom: 45px;
 }
 
 .heading small {
-    color: var(--purple);
+    color: var(--green);
     letter-spacing: 3px;
     font-size: 11px;
     font-weight: 700;
@@ -194,7 +187,7 @@ section {
 .heading h2 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 42px;
-    margin-top: 13px;
+    margin-top: 12px;
 }
 
 .heading p {
@@ -224,25 +217,24 @@ section {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 18px;
 }
 
 .skill {
-    background: #20203F;
-    padding: 28px 23px;
+    background: var(--dark);
+    padding: 28px 22px;
     border: 1px solid var(--border);
     border-radius: 10px;
     transition: .3s;
 }
 
 .skill:hover {
-    transform: translateY(-7px);
-    border-color: var(--purple);
-    box-shadow: 0 10px 30px #8B9CFF12;
+    transform: translateY(-6px);
+    border-color: var(--green);
 }
 
 .icon {
-    font-size: 31px;
+    font-size: 30px;
     margin-bottom: 18px;
 }
 
@@ -258,20 +250,19 @@ section {
 
 /* EXPERIENCE */
 
-.experience,
-.education {
+.experience, .education {
     background: var(--dark);
 }
 
 .timeline {
-    border-left: 2px solid var(--purple);
+    border-left: 2px solid var(--green);
     padding-left: 30px;
     max-width: 800px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 }
 
 .timeline-item::before {
@@ -281,25 +272,23 @@ section {
     top: 5px;
     width: 12px;
     height: 12px;
-    background: var(--purple);
+    background: var(--green);
     border-radius: 50%;
-    box-shadow: 0 0 12px #8B9CFF70;
 }
 
 .timeline-item small {
-    color: var(--purple);
+    color: var(--green);
     font-weight: 700;
 }
 
 .timeline-item h3 {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 9px;
 }
 
 .timeline-item p {
     color: var(--gray);
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.8;
     margin-top: 10px;
 }
 
@@ -308,66 +297,59 @@ section {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 20px;
 }
 
 .project {
     padding: 30px;
-    background: #20203F;
+    background: var(--dark);
     border: 1px solid var(--border);
     border-radius: 10px;
     transition: .3s;
 }
 
 .project:hover {
-    transform: translateY(-7px);
-    border-color: var(--purple);
-    box-shadow: 0 10px 30px #8B9CFF12;
+    transform: translateY(-6px);
+    border-color: var(--green);
 }
 
 .project small {
-    color: var(--purple);
+    color: var(--green);
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
 .project h3 {
     margin: 18px 0 12px;
-    font-size: 18px;
 }
 
 .project p {
     color: var(--gray);
     font-size: 13px;
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 /* EDUCATION */
 
 .edu-box {
-    background: #20203F;
+    background: var(--black);
     padding: 30px;
     border: 1px solid var(--border);
-    border-left: 3px solid var(--purple);
+    border-left: 3px solid var(--green);
     max-width: 700px;
     border-radius: 8px;
 }
 
-.edu-box h3 {
-    margin-bottom: 12px;
-}
-
 .edu-box p {
     color: var(--gray);
-    line-height: 1.9;
-    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 12px;
 }
 
 /* CONTACT */
 
 .contact {
     text-align: center;
-    background: #191936;
+    background: #17251D;
 }
 
 .contact .heading h2 {
@@ -385,12 +367,8 @@ section {
     justify-content: center;
     gap: 30px;
     margin-top: 35px;
-    color: var(--purple);
+    color: var(--green);
     font-size: 13px;
-}
-
-.socials a {
-    transition: .3s;
 }
 
 .socials a:hover {
@@ -400,23 +378,23 @@ section {
 /* FOOTER */
 
 footer {
-    padding: 27px;
+    padding: 25px;
     text-align: center;
-    background: #0B0B1A;
+    background: #0A0F0C;
     color: var(--gray);
     font-size: 12px;
 }
 
 footer span {
-    color: var(--purple);
+    color: var(--green);
 }
 
-/* ANIMATIONS */
+/* ANIMATION */
 
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: .8s ease;
+    transform: translateY(25px);
+    transition: .8s;
 }
 
 .reveal.show {
@@ -455,7 +433,6 @@ footer span {
         padding: 25px 8%;
         flex-direction: column;
         gap: 22px;
-        border-bottom: 1px solid var(--border);
     }
 
     nav.active {
@@ -463,8 +440,8 @@ footer span {
     }
 
     .hero {
-        min-height: 90vh;
         padding: 140px 6% 90px;
+        min-height: 90vh;
     }
 
     section {
@@ -475,17 +452,9 @@ footer span {
         font-size: 34px;
     }
 
-    .contact .heading h2 {
-        font-size: 38px;
-    }
-
     .skills-grid,
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .socials {
-        gap: 20px;
     }
 }
 
@@ -494,25 +463,16 @@ footer span {
     .project-grid {
         grid-template-columns: 1fr;
     }
-
-    .hero h1 {
-        font-size: 43px;
-    }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <header>
     <a href="#home" class="logo">MAHIR.</a>
 
-    <button class="menu" onclick="toggleMenu()" aria-label="Toggle navigation">
-        ☰
-    </button>
+    <button class="menu" onclick="toggleMenu()">☰</button>
 
     <nav id="navbar">
         <a href="#home">Home</a>
@@ -525,24 +485,18 @@ footer span {
     </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO: NO PHOTO BOX -->
 
 <section class="hero" id="home">
-
     <div class="hero-content reveal">
 
-        <div class="tag">
-            ✦ DEVOPS EDUCATOR & TECHNOLOGY ENTHUSIAST
-        </div>
+        <div class="tag">✦ DEVOPS EDUCATOR & TECHNOLOGY ENTHUSIAST</div>
 
-        <h1>
-            Hi, I'm<br>
+        <h1>Hi, I'm<br>
             <span>Mahir Bin Najim.</span>
         </h1>
 
-        <h3>
-            DevOps Teacher | Linux | Cloud | Automation
-        </h3>
+        <h3>DevOps Teacher | Linux | Cloud | Automation</h3>
 
         <p>
             Passionate about technology, automation and cloud computing.
@@ -556,13 +510,9 @@ footer span {
         </div>
 
     </div>
-
 </section>
 
-<!-- ABOUT -->
-
 <section class="about" id="about">
-
     <div class="heading reveal">
         <small>01 / INTRODUCTION</small>
         <h2>About Me</h2>
@@ -570,20 +520,16 @@ footer span {
 
     <div class="about-content reveal">
         <p>
-            I'm Mahir Bin Najim, a DevOps Teacher interested in modern
-            IT infrastructure, software development and cloud computing.
-            I enjoy sharing technical knowledge, guiding learners and
-            helping students build practical technical skills.
+            I'm Mahir Bin Najim, a DevOps Teacher interested in
+            modern IT infrastructure, software development and cloud
+            computing. I enjoy sharing technical knowledge, guiding
+            learners and helping students build practical technical skills.
             My goal is to make technology simple, accessible and inspiring.
         </p>
     </div>
-
 </section>
 
-<!-- SKILLS -->
-
 <section id="skills">
-
     <div class="heading reveal">
         <small>02 / EXPERTISE</small>
         <h2>Technical Skills</h2>
@@ -591,139 +537,66 @@ footer span {
     </div>
 
     <div class="skills-grid reveal">
-
-        <div class="skill">
-            <div class="icon">🐧</div>
-            <h3>Linux</h3>
-            <p>System Administration</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">🐙</div>
-            <h3>Git & GitHub</h3>
-            <p>Version Control</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">🐳</div>
-            <h3>Docker</h3>
-            <p>Containerization</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">☸️</div>
-            <h3>Kubernetes</h3>
-            <p>Container Orchestration</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">☁️</div>
-            <h3>AWS</h3>
-            <p>Cloud Computing</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">⚙️</div>
-            <h3>Jenkins</h3>
-            <p>CI/CD Automation</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">🔧</div>
-            <h3>Ansible</h3>
-            <p>Configuration Management</p>
-        </div>
-
-        <div class="skill">
-            <div class="icon">📊</div>
-            <h3>Monitoring</h3>
-            <p>Prometheus & Grafana</p>
-        </div>
-
+        <div class="skill"><div class="icon">🐧</div><h3>Linux</h3><p>System Administration</p></div>
+        <div class="skill"><div class="icon">🐙</div><h3>Git & GitHub</h3><p>Version Control</p></div>
+        <div class="skill"><div class="icon">🐳</div><h3>Docker</h3><p>Containerization</p></div>
+        <div class="skill"><div class="icon">☸️</div><h3>Kubernetes</h3><p>Container Orchestration</p></div>
+        <div class="skill"><div class="icon">☁️</div><h3>AWS</h3><p>Cloud Computing</p></div>
+        <div class="skill"><div class="icon">⚙️</div><h3>Jenkins</h3><p>CI/CD Automation</p></div>
+        <div class="skill"><div class="icon">🔧</div><h3>Ansible</h3><p>Configuration Management</p></div>
+        <div class="skill"><div class="icon">📊</div><h3>Monitoring</h3><p>Prometheus & Grafana</p></div>
     </div>
-
 </section>
 
-<!-- EXPERIENCE -->
-
 <section class="experience" id="experience">
-
     <div class="heading reveal">
-        <small>03 / MY JOURNEY</small>
+        <small>03 / JOURNEY</small>
         <h2>Experience</h2>
     </div>
 
     <div class="timeline reveal">
-
         <div class="timeline-item">
             <small>Professional Role</small>
             <h3>DevOps Teacher</h3>
-            <p>
-                Teaching DevOps fundamentals, Linux, automation,
-                cloud computing and modern development workflows.
-            </p>
+            <p>Teaching DevOps fundamentals, Linux, automation and cloud technologies.</p>
         </div>
 
         <div class="timeline-item">
             <small>Continuous Learning</small>
             <h3>Technology Enthusiast</h3>
-            <p>
-                Exploring new technologies, practicing infrastructure tools
-                and developing practical technical projects.
-            </p>
+            <p>Exploring new technologies and developing practical technical projects.</p>
         </div>
-
     </div>
-
 </section>
 
-<!-- PROJECTS -->
-
 <section id="projects">
-
     <div class="heading reveal">
         <small>04 / MY WORK</small>
         <h2>Featured Projects</h2>
-        <p>Some practical projects and technical explorations.</p>
     </div>
 
     <div class="project-grid reveal">
-
         <div class="project">
             <small>01 / LINUX</small>
             <h3>Automated Folder Backup</h3>
-            <p>
-                Linux shell scripting and automated backups
-                using cron jobs.
-            </p>
+            <p>Linux shell scripting and automated backups using cron jobs.</p>
         </div>
 
         <div class="project">
             <small>02 / CI/CD</small>
             <h3>Jenkins Pipeline</h3>
-            <p>
-                Automating application deployment
-                using Jenkins and GitHub.
-            </p>
+            <p>Automating application deployment using Jenkins and GitHub.</p>
         </div>
 
         <div class="project">
             <small>03 / DOCKER</small>
             <h3>Container Projects</h3>
-            <p>
-                Exploring containerization and application
-                deployment environments.
-            </p>
+            <p>Exploring containerization and application deployment.</p>
         </div>
-
     </div>
-
 </section>
 
-<!-- EDUCATION -->
-
 <section class="education" id="education">
-
     <div class="heading reveal">
         <small>05 / BACKGROUND</small>
         <h2>Education</h2>
@@ -736,78 +609,56 @@ footer span {
             and professional development in Information Technology.
         </p>
     </div>
-
 </section>
 
-<!-- CONTACT -->
-
 <section class="contact" id="contact">
-
     <div class="heading reveal">
         <small>06 / GET IN TOUCH</small>
         <h2>Let's Connect.</h2>
     </div>
 
-    <p>
-        Have an idea, project or collaboration in mind?
-        Let's connect and create something meaningful.
-    </p>
+    <p>Have an idea or collaboration in mind? Let's talk.</p>
 
     <a href="mailto:your-email@example.com" class="btn">
         Send Me an Email ↗
     </a>
 
     <div class="socials">
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
     </div>
-
 </section>
-
-<!-- FOOTER -->
 
 <footer>
     © <span id="year"></span> Mahir Bin Najim. All Rights Reserved.
 </footer>
 
-<!-- JAVASCRIPT -->
-
 <script>
-
-// Mobile navigation
 function toggleMenu() {
     document.getElementById("navbar").classList.toggle("active");
 }
 
-// Close menu after clicking a link
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", () => {
         document.getElementById("navbar").classList.remove("active");
     });
 });
 
-// Dynamic copyright year
 document.getElementById("year").textContent =
     new Date().getFullYear();
 
-// Scroll reveal animations
 const observer = new IntersectionObserver(entries => {
-
     entries.forEach(entry => {
-
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
-
     });
-
 }, { threshold: 0.12 });
 
-document.querySelectorAll(".reveal").forEach(element => {
-    observer.observe(element);
+document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
 });
-
 </script>
 
 </body>
