@@ -6,18 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahir Bin Najim | DevOps Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --navy: #101C2C;
-    --navy-light: #192A40;
-    --gold: #D6B978;
-    --gold-light: #E8D7B5;
-    --ivory: #F7F3EB;
-    --white: #FFFFFF;
-    --gray: #737E8C;
-    --light-bg: #F0EEE8;
+    --black: #111714;
+    --dark: #19221D;
+    --green: #65D6A0;
+    --green-dark: #37AE78;
+    --white: #F4F7F4;
+    --gray: #A9B5AD;
+    --border: #29352E;
 }
 
 * {
@@ -29,8 +28,8 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background: var(--ivory);
-    color: var(--navy);
+    background: var(--black);
+    color: var(--white);
 }
 
 a {
@@ -41,22 +40,24 @@ a {
 /* NAVBAR */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: rgba(17,23,20,.95);
+    backdrop-filter: blur(12px);
     padding: 20px 8%;
-    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid #ffffff15;
+    border-bottom: 1px solid var(--border);
 }
 
 .logo {
-    color: var(--gold);
+    color: var(--green);
     font-size: 24px;
     font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 nav {
@@ -65,130 +66,105 @@ nav {
 }
 
 nav a {
-    color: #D5DCE5;
     font-size: 13px;
+    color: var(--gray);
     transition: .3s;
 }
 
 nav a:hover {
-    color: var(--gold);
+    color: var(--green);
 }
 
 .menu {
     display: none;
-    color: var(--gold);
     background: none;
     border: none;
+    color: var(--green);
     font-size: 25px;
+    cursor: pointer;
 }
 
 /* HERO */
 
 .hero {
     min-height: 100vh;
-    padding: 150px 8% 90px;
+    padding: 170px 8% 110px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    background: var(--navy);
-    color: var(--white);
+    background:
+        radial-gradient(ellipse at 85% 30%, #1b3c2d 0%, transparent 40%),
+        var(--black);
 }
 
-.hero-text {
-    max-width: 650px;
+.hero-content {
+    max-width: 850px;
 }
 
 .tag {
     display: inline-block;
-    color: var(--gold);
-    border: 1px solid #D6B97870;
-    padding: 10px 18px;
+    color: var(--green);
+    background: #65D6A014;
+    border: 1px solid #65D6A040;
+    padding: 10px 17px;
     border-radius: 30px;
     font-size: 12px;
-    margin-bottom: 28px;
     letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(45px, 6vw, 75px);
-    line-height: 1.2;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 1.13;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero h1 span {
-    color: var(--gold);
+    color: var(--green);
 }
 
 .hero h3 {
-    color: var(--gold-light);
+    font-size: 19px;
     font-weight: 500;
+    color: #D3DED6;
     margin-bottom: 20px;
-    font-size: 18px;
 }
 
 .hero p {
-    color: #B8C2D0;
-    max-width: 530px;
+    color: var(--gray);
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 2;
+    max-width: 620px;
 }
 
 .buttons {
     display: flex;
     gap: 15px;
-    margin-top: 32px;
     flex-wrap: wrap;
+    margin-top: 35px;
 }
 
 .btn {
     display: inline-block;
-    background: var(--gold);
-    color: var(--navy);
     padding: 14px 25px;
-    border-radius: 5px;
+    border-radius: 6px;
+    background: var(--green);
+    color: var(--black);
     font-weight: 700;
     font-size: 13px;
     transition: .3s;
 }
 
 .btn:hover {
-    background: var(--gold-light);
+    background: #8AE6B8;
     transform: translateY(-3px);
 }
 
 .btn-outline {
     background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-}
-
-/* PROFILE */
-
-.profile-box {
-    width: 350px;
-    height: 420px;
-    background: var(--navy-light);
-    border: 1px solid #D6B97870;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.profile-inner {
-    width: 275px;
-    height: 335px;
-    background: linear-gradient(145deg, #D6B978, #927443);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 75px;
-    color: var(--navy);
-    font-weight: 800;
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 
 /* GENERAL */
@@ -202,15 +178,14 @@ section {
 }
 
 .heading small {
-    color: #9C7C40;
-    font-size: 11px;
+    color: var(--green);
     letter-spacing: 3px;
+    font-size: 11px;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .heading h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 42px;
     margin-top: 12px;
 }
@@ -224,7 +199,7 @@ section {
 /* ABOUT */
 
 .about {
-    background: var(--ivory);
+    background: var(--dark);
 }
 
 .about-content {
@@ -232,9 +207,9 @@ section {
 }
 
 .about-content p {
-    color: #667080;
-    font-size: 15px;
+    color: var(--gray);
     line-height: 2;
+    font-size: 15px;
 }
 
 /* SKILLS */
@@ -242,79 +217,78 @@ section {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 18px;
 }
 
 .skill {
-    background: white;
-    padding: 28px 23px;
+    background: var(--dark);
+    padding: 28px 22px;
+    border: 1px solid var(--border);
     border-radius: 10px;
-    border: 1px solid #E7E1D5;
     transition: .3s;
 }
 
 .skill:hover {
     transform: translateY(-6px);
-    border-color: var(--gold);
-    box-shadow: 0 12px 30px #101C2C0D;
+    border-color: var(--green);
 }
 
 .icon {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .skill h3 {
     font-size: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
 .skill p {
-    font-size: 12px;
     color: var(--gray);
+    font-size: 12px;
 }
 
 /* EXPERIENCE */
 
 .experience, .education {
-    background: var(--light-bg);
+    background: var(--dark);
 }
 
 .timeline {
-    border-left: 2px solid var(--gold);
+    border-left: 2px solid var(--green);
     padding-left: 30px;
     max-width: 800px;
 }
 
 .timeline-item {
-    margin-bottom: 35px;
     position: relative;
+    margin-bottom: 35px;
 }
 
-.timeline-item:before {
+.timeline-item::before {
     content: "";
     position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--gold);
     left: -37px;
     top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--green);
+    border-radius: 50%;
 }
 
 .timeline-item small {
-    color: #96743B;
+    color: var(--green);
     font-weight: 700;
 }
 
 .timeline-item h3 {
-    margin-top: 8px;
+    margin-top: 9px;
 }
 
 .timeline-item p {
     color: var(--gray);
-    line-height: 1.8;
     font-size: 14px;
+    line-height: 1.8;
     margin-top: 10px;
 }
 
@@ -323,72 +297,67 @@ section {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 20px;
 }
 
 .project {
     padding: 30px;
-    background: white;
-    border: 1px solid #E7E1D5;
+    background: var(--dark);
+    border: 1px solid var(--border);
     border-radius: 10px;
     transition: .3s;
 }
 
 .project:hover {
     transform: translateY(-6px);
-    border-color: var(--gold);
+    border-color: var(--green);
 }
 
 .project small {
-    color: #9C7C40;
+    color: var(--green);
     font-weight: 700;
 }
 
 .project h3 {
-    margin: 17px 0 12px;
+    margin: 18px 0 12px;
 }
 
 .project p {
+    color: var(--gray);
     font-size: 13px;
     line-height: 1.8;
-    color: var(--gray);
 }
 
 /* EDUCATION */
 
 .edu-box {
-    background: white;
+    background: var(--black);
     padding: 30px;
-    border-radius: 10px;
-    border-left: 4px solid var(--gold);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
     max-width: 700px;
+    border-radius: 8px;
 }
 
 .edu-box p {
     color: var(--gray);
     line-height: 1.8;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 /* CONTACT */
 
 .contact {
-    background: var(--navy);
-    color: white;
     text-align: center;
-}
-
-.contact .heading small {
-    color: var(--gold);
+    background: #17251D;
 }
 
 .contact .heading h2 {
-    color: white;
-    font-size: 45px;
+    font-size: 48px;
 }
 
 .contact p {
-    color: #C1CAD5;
+    color: var(--gray);
     line-height: 1.9;
     margin: 15px 0 30px;
 }
@@ -398,7 +367,7 @@ section {
     justify-content: center;
     gap: 30px;
     margin-top: 35px;
-    color: var(--gold-light);
+    color: var(--green);
     font-size: 13px;
 }
 
@@ -409,15 +378,15 @@ section {
 /* FOOTER */
 
 footer {
-    background: #0B1421;
-    color: #AAB5C3;
-    text-align: center;
     padding: 25px;
+    text-align: center;
+    background: #0A0F0C;
+    color: var(--gray);
     font-size: 12px;
 }
 
 footer span {
-    color: var(--gold);
+    color: var(--green);
 }
 
 /* ANIMATION */
@@ -436,19 +405,6 @@ footer span {
 /* RESPONSIVE */
 
 @media(max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero p {
-        margin: auto;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -473,27 +429,27 @@ footer span {
         top: 65px;
         left: 0;
         width: 100%;
+        background: var(--dark);
         padding: 25px 8%;
-        background: var(--navy-light);
         flex-direction: column;
+        gap: 22px;
     }
 
     nav.active {
         display: flex;
     }
 
-    .profile-box {
-        width: 280px;
-        height: 330px;
-    }
-
-    .profile-inner {
-        width: 225px;
-        height: 265px;
+    .hero {
+        padding: 140px 6% 90px;
+        min-height: 90vh;
     }
 
     section {
         padding: 75px 6%;
+    }
+
+    .heading h2 {
+        font-size: 34px;
     }
 
     .skills-grid,
@@ -529,20 +485,23 @@ footer span {
     </nav>
 </header>
 
+<!-- HERO: NO PHOTO BOX -->
+
 <section class="hero" id="home">
+    <div class="hero-content reveal">
 
-    <div class="hero-text reveal">
+        <div class="tag">✦ DEVOPS EDUCATOR & TECHNOLOGY ENTHUSIAST</div>
 
-        <div class="tag">✦ DEVOPS EDUCATOR</div>
+        <h1>Hi, I'm<br>
+            <span>Mahir Bin Najim.</span>
+        </h1>
 
-        <h1>Hi, I'm<br><span>Mahir Bin Najim.</span></h1>
-
-        <h3>DevOps Teacher | Cloud | Linux | Automation</h3>
+        <h3>DevOps Teacher | Linux | Cloud | Automation</h3>
 
         <p>
             Passionate about technology, automation and cloud computing.
-            Helping aspiring IT professionals understand modern DevOps
-            practices through practical and engaging learning.
+            Helping aspiring developers understand modern DevOps practices
+            and build real-world technical skills through practical learning.
         </p>
 
         <div class="buttons">
@@ -551,25 +510,20 @@ footer span {
         </div>
 
     </div>
-
-    <div class="profile-box reveal">
-        <div class="profile-inner">MBN</div>
-    </div>
-
 </section>
 
 <section class="about" id="about">
     <div class="heading reveal">
-        <small>01 / Introduction</small>
+        <small>01 / INTRODUCTION</small>
         <h2>About Me</h2>
     </div>
 
     <div class="about-content reveal">
         <p>
-            I'm Mahir Bin Najim, a DevOps Teacher passionate about
+            I'm Mahir Bin Najim, a DevOps Teacher interested in
             modern IT infrastructure, software development and cloud
-            computing. I enjoy teaching technical concepts and helping
-            students build practical knowledge through hands-on learning.
+            computing. I enjoy sharing technical knowledge, guiding
+            learners and helping students build practical technical skills.
             My goal is to make technology simple, accessible and inspiring.
         </p>
     </div>
@@ -577,8 +531,9 @@ footer span {
 
 <section id="skills">
     <div class="heading reveal">
-        <small>02 / Expertise</small>
+        <small>02 / EXPERTISE</small>
         <h2>Technical Skills</h2>
+        <p>Tools and technologies in my DevOps journey.</p>
     </div>
 
     <div class="skills-grid reveal">
@@ -595,7 +550,7 @@ footer span {
 
 <section class="experience" id="experience">
     <div class="heading reveal">
-        <small>03 / Journey</small>
+        <small>03 / JOURNEY</small>
         <h2>Experience</h2>
     </div>
 
@@ -603,20 +558,20 @@ footer span {
         <div class="timeline-item">
             <small>Professional Role</small>
             <h3>DevOps Teacher</h3>
-            <p>Teaching DevOps fundamentals, Linux, cloud technologies and automation.</p>
+            <p>Teaching DevOps fundamentals, Linux, automation and cloud technologies.</p>
         </div>
 
         <div class="timeline-item">
             <small>Continuous Learning</small>
             <h3>Technology Enthusiast</h3>
-            <p>Exploring new technologies, building projects and improving technical knowledge.</p>
+            <p>Exploring new technologies and developing practical technical projects.</p>
         </div>
     </div>
 </section>
 
 <section id="projects">
     <div class="heading reveal">
-        <small>04 / Portfolio</small>
+        <small>04 / MY WORK</small>
         <h2>Featured Projects</h2>
     </div>
 
@@ -643,7 +598,7 @@ footer span {
 
 <section class="education" id="education">
     <div class="heading reveal">
-        <small>05 / Background</small>
+        <small>05 / BACKGROUND</small>
         <h2>Education</h2>
     </div>
 
@@ -658,13 +613,15 @@ footer span {
 
 <section class="contact" id="contact">
     <div class="heading reveal">
-        <small>06 / Get In Touch</small>
+        <small>06 / GET IN TOUCH</small>
         <h2>Let's Connect.</h2>
     </div>
 
     <p>Have an idea or collaboration in mind? Let's talk.</p>
 
-    <a href="mailto:your-email@example.com" class="btn">Send Me an Email ↗</a>
+    <a href="mailto:your-email@example.com" class="btn">
+        Send Me an Email ↗
+    </a>
 
     <div class="socials">
         <a href="https://github.com/" target="_blank">GitHub</a>
